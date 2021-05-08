@@ -1,0 +1,64 @@
+{
+  "name": "lyzh-admin-vue-components",
+  "version": "1.1.2",
+  "description": "Lyzh管理后台Vue组件库",
+  "main": "dist/lyzh.admin.vue.components.min.js",
+  "scripts": {
+    "dev": "rollup -wc rollup.config.dev.js",
+    "build:lib": "eslint ./src && rollup -c rollup.config.dev.js",
+    "build:prod": "eslint ./src && rollup -c rollup.config.prod.js",
+    "build": "npm run build:lib && npm run build:prod",
+    "lint": "eslint ./src",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,vue,css,md,json}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "files": [
+    "dist",
+    "example",
+    "src"
+  ],
+  "keywords": [
+    "lyzh",
+    "admin",
+    "vue",
+    "components"
+  ],
+  "author": {
+    "name": "cuitongyang"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/preset-env": "^7.10.2",
+    "eslint": "^7.2.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "rollup": "^2.16.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "2.6.12",
+    "sass": "^1.26.8",
+    "@commitlint/cli": "^10.0.0",
+    "@commitlint/config-conventional": "^10.0.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "^6.0.0",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "uuid": "^8.2.0"
+  }
+}
